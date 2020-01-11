@@ -9,6 +9,11 @@ export default new Router({
       path: '/',
       name: 'Home',
       component: resolve=>require(["@/components/Home"], resolve)
+    },
+    {
+      path: '/About',
+      name: 'About',
+      component: resolve=>require(["@/components/About"], resolve)
     }
   ]
 })

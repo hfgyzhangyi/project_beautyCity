@@ -21,7 +21,7 @@
 								<router-link class="nav-link" :to="{name:'Home'}">主页 <span class="sr-only">(current)</span></router-link>
 							</li>
 							<li class="nav-item">
-								<router-link class="nav-link" :to="{name:'Home'}">关于</router-link>
+								<router-link class="nav-link" :to="{name:'About'}">关于</router-link>
 							</li>
 							<li class="nav-item">
 								<router-link class="nav-link" :to="{name:'Home'}">服务</router-link>
@@ -121,15 +121,80 @@
 			</div>
 			<div class="clearfix"> </div>
 		</div>
+    <section class="booking py-5" id="booking">
+			<h3 class="text-center mb-4">Search Your Tour</h3>
+			<div class="container">
+				<div class="book-form">
+					<form action="#" method="post">
+						<div class="row">
+							<div class="col-md-3 col-sm-6 col-6 px-2 form-time-w3layouts editContent">
+								<label class="editContent"><span class="fa fa-user" aria-hidden="true"></span> 姓名</label>
+								<input type="text" placeholder="姓名" required="">
+							</div>
+							<div class="col-md-3 col-sm-6 col-6 px-2 form-date-w3-agileits editContent">
+								<label class="editContent"><span class="fa fa-map-marker" aria-hidden="true"></span> 旅游地点</label>
+								<select class="form-control">
+									<option>目的地</option>
+									<option>伦敦</option>
+									<option>巴黎</option>
+									<option>意大利</option>
+									<option>日本</option>
+									<option>美国</option>
+								</select>
+							</div>
+							<div class="col-md-2 col-sm-4 col-6 px-2 form-left-agileits-w3layouts editContent">
+								<label class="editContent"><span class="fa fa-bus" aria-hidden="true"></span> 出发</label>
+								<div class="agileits_w3layouts_main_gridl">
+									<input class="date has Datepicker hasDatepicker" id="datepicker" name="Text" type="text" value="时间" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '设置时间';}" required="">
+								</div>
+							</div>
+							<div class="col-md-2 col-sm-4 col-6 px-2 form-left-agileits-w3layouts editContent">
+								<label class="editContent"><span class="fa fa-bus" aria-hidden="true"></span> 回归</label>
+								<div class="agileits_w3layouts_main_gridl">
+									<input class="date has Datepicker hasDatepicker" id="datepicker1" name="Text" type="text" value="返回时间" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '设置时间';}" required="">
+								</div>
+							</div>
+							<div class="col-md-2 px-2 col-sm-4 col-6 form-left-agileits-submit editContent">
+								<input type="submit" value="搜索">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+    <section class="welcome py-5">
+			<div class="container py-3">
+				<h3 class="heading text-center mb-md-5 mb-4"> 关于我们 </h3>
+				<div class="row welcome-grids">
+					<div class="col-lg-6">
+						<h4 class="mb-3">欢迎来到旅游世界</h4>
+						<h3>记住，幸福是一种旅行方式，而不是目的地。</h3>
+						<p class="my-4">在旅心，您可以尽情选择最佳、最省、最豪、最近路线.我们为您提供方案，您选择！</p>
+						<a href="javascript:;">了解更多</a>
+					</div>
+					<div class="col-lg-6 mt-lg-0 mt-5 welcome-grid3">
+						<div class="position">
+							<img src="../assets/banner1.jpg" alt="" class="img-fluid">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+    <my-bottom></my-bottom>
   </div>
 </template>
 
 <script>
-//http://www.sucai8.cn/demo/2019/10/%E5%A4%A7%E6%B0%94%E6%97%85%E6%B8%B8%E7%BD%91%E7%AB%99%E6%95%B4%E7%AB%99%E6%A8%A1%E6%9D%BF/images/right.png
+//http://www.sucai8.cn/demo/2019/10/%E5%A4%A7%E6%B0%94%E6%97%85%E6%B8%B8%E7%BD%91%E7%AB%99%E6%95%B4%E7%AB%99%E6%A8%A1%E6%9D%BF/images/b2.jpg
 import $ from 'jquery'
 export default {
+  data(){
+    return {
+      timer:""
+    }
+  },
   mounted(){
-    setInterval(() => {
+    this.timer = setInterval(() => {
       var index = $(".callbacks1_on").index();
       $(".callbacks1_on").css("zIndex",1);
       $(".callbacks1_on").css("opacity",0);
@@ -145,6 +210,10 @@ export default {
       $(".callbacks1_on").css("zIndex",2);
       $(".callbacks1_on").css("opacity",1);
     }, 4000);
+  },
+  beforeDestroy(){
+    clearInterval(this.timer);
+    this.timer = null;
   },
   methods:{
     changeLayer(e){
@@ -191,6 +260,10 @@ export default {
 </script>
 
 <style scoped>
+a:active,a:visited,a:link{
+    text-decoration: none !important;
+}
+/***************************************/
 article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section{
   display: block;
 }
@@ -323,6 +396,7 @@ ul.dropdown-menu li a{
   border-bottom: 1px solid;
   padding-bottom: .2rem;
 }
+/*********************************/
 .slider{
   position: relative;
 }
@@ -509,6 +583,120 @@ li.nav-item{
   background: #f2994a;
   border: 2px solid #f2994a;
 }
+/****************Search Your Tour**********************/
+.booking h3{
+  font-size: 22px;
+  color: #333;
+  letter-spacing: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.book-form label{
+  font-size: 15px;
+  color: #333;
+  text-align: left;
+  display: inline-block;
+  float: left;
+  font-weight: 600;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+.book-form input[type="text"], .book-form input[type="date"], .book-form input[type="text"], .book-form input[type="email"]{
+  width: 100%;
+  color: #9a9797;
+  outline: none;
+  font-size: 15px;
+  padding: 10px 15px;
+  letter-spacing: 1px;
+  border: 2px solid #fff;
+  -webkit-appearance: none;
+  margin-bottom: 1em;
+  background: #333;
+}
+.book-form form input[type="submit"]{
+  background: #f2994a;
+  color: #FFFFFF;
+  border: 2px solid #f2994a;
+  padding: 8px 15px;
+  font-size: 15px;
+  font-weight: 600;
+  outline: none;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+  text-transform: uppercase;
+  width: 100%;
+  cursor: pointer;
+  letter-spacing: 1px;
+  margin-top: 2.3em;
+  -webkit-appearance: none;
+}
+.book-form select.form-control{
+  outline: none;
+  font-size: 15px;
+  padding: 7px 10px;
+  letter-spacing: 1px;
+  width: 100%;
+  line-height: 25px;
+  background: #333;
+  color: #9a9797;
+  border: 2px solid #fff;
+  box-shadow: none!important;
+}
+select.form-control:not([size]):not([multiple]){
+  height: calc(2.25rem + 10px);
+}
+/****************关于我们**********************/
+h2.heading, h3.heading{
+  font-size: 50px;
+  text-transform: capitalize;
+  font-weight: 600;
+  letter-spacing: 5px;
+  color: #3a3a3a;
+}
+.welcome-grids h4{
+  color: #999;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+.welcome-grids h3{
+  font-size: 24px;
+  color: #333;
+  font-weight: 600;
+  line-height: 34px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.welcome-grids p{
+  color: #555;
+  font-size: 15px;
+  letter-spacing: 1px;
+  line-height: 28px;
+}
+.welcome-grids a{
+  font-size: 15px;
+  display: inline-block;
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  background: #f2994a;
+  padding: 13px 30px;
+  border-radius: 35px;
+}
+.position{
+  padding: 12px;
+  border: 4px solid #666;
+}
+.welcome-grid3 img{
+  padding: 12px;
+  border: 4px solid #f2994a;
+}
+.img-fluid{
+  max-width: 100%;
+  height: auto;
+}
 @media screen and (min-width: 992px){
   .navbar-expand-lg .navbar-nav .dropdown-menu{
     position: absolute;
@@ -556,6 +744,12 @@ li.nav-item{
   }
   .callbacks_nav.next{
     right: 45%;
+  }
+}
+@media screen and (max-width: 1080px){
+  .welcome-grids h3{
+    font-size: 22px;
+    letter-spacing: 1px;
   }
 }
 @media screen and (max-width: 1024px){
@@ -609,6 +803,12 @@ li.nav-item{
   }
   .callbacks_nav.next{
     right: 42%;
+  }
+}
+@media screen and (max-width: 768px){
+  h2.heading, h3.heading{
+    font-size: 45px;
+    letter-spacing: 3px;
   }
 }
 @media screen and (max-width: 736px){
@@ -668,6 +868,15 @@ li.nav-item{
   .callbacks_nav.next{
     right: 41%;
   }
+  .welcome-grids h3{
+    font-size: 20px;
+    letter-spacing: 0px;
+  }
+  .welcome-grids a{
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 11px 30px;
+  }
 }
 @media screen and (max-width: 568px){
   header{
@@ -675,6 +884,9 @@ li.nav-item{
   }
   .banner-info_agile_w3ls h3, .banner-info_agile_w3ls h2{
     font-size: 2em;
+  }
+  .book-form form input[type="submit"]{
+    margin-top: .3em;
   }
 }
 @media screen and (max-width: 480px){
