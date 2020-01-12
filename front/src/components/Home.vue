@@ -24,7 +24,7 @@
 								<router-link class="nav-link" :to="{name:'About'}">关于</router-link>
 							</li>
 							<li class="nav-item">
-								<router-link class="nav-link" :to="{name:'Home'}">服务</router-link>
+								<router-link class="nav-link" :to="{name:'Service'}">服务</router-link>
 							</li>
 							<li class="dropdown nav-item">
 								<router-link :to="{name:'Home'}" class="dropdown-toggle nav-link" data-toggle="dropdown">分类
@@ -40,7 +40,7 @@
 								</ul>
 							</li>
 							<li class="nav-item">
-								<router-link class="nav-link" :to="{name:'Home'}">推介</router-link>
+								<router-link class="nav-link" :to="{name:'Recommend'}">推介</router-link>
 							</li>
 							<li class="nav-item pr-lg-0">
 								<router-link class="nav-link pr-lg-0" :to="{name:'Home'}">联系</router-link>
@@ -185,7 +185,7 @@
 </template>
 
 <script>
-//http://www.sucai8.cn/demo/2019/10/%E5%A4%A7%E6%B0%94%E6%97%85%E6%B8%B8%E7%BD%91%E7%AB%99%E6%95%B4%E7%AB%99%E6%A8%A1%E6%9D%BF/images/b2.jpg
+//http://www.sucai8.cn/demo/2019/10/%E5%A4%A7%E6%B0%94%E6%97%85%E6%B8%B8%E7%BD%91%E7%AB%99%E6%95%B4%E7%AB%99%E6%A8%A1%E6%9D%BF/images/g7.jpg
 import $ from 'jquery'
 export default {
   data(){

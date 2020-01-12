@@ -14,6 +14,16 @@ export default new Router({
       path: '/About',
       name: 'About',
       component: resolve=>require(["@/components/About"], resolve)
+    },
+    {
+      path: '/Service',
+      name: 'Service',
+      component: resolve=>require(["@/components/Service"], resolve)
+    },
+    {
+      path: '/Recommend',
+      name: 'Recommend',
+      component: resolve=>require(["@/components/Recommend"], resolve)
     }
   ]
 })
