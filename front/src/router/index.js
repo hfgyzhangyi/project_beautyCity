@@ -24,6 +24,11 @@ export default new Router({
       path: '/Recommend',
       name: 'Recommend',
       component: resolve=>require(["@/components/Recommend"], resolve)
+    },
+    {
+      path: '/Price',
+      name: 'Price',
+      component: resolve=>require(["@/components/Price"], resolve)
     }
   ]
 })

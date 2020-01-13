@@ -32,7 +32,7 @@
                                 </router-link>
                                 <ul class="dropdown-menu agile_short_dropdown">
                                     <li>
-                                        <router-link :to="{name:'Home'}">定价计划</router-link>
+                                        <router-link :to="{name:'Price'}">定价计划</router-link>
                                     </li>
                                     <li>
                                         <router-link :to="{name:'Home'}">路线选择</router-link>
