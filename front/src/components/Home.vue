@@ -185,7 +185,7 @@
 </template>
 
 <script>
-//http://www.sucai8.cn/demo/2019/10/%E5%A4%A7%E6%B0%94%E6%97%85%E6%B8%B8%E7%BD%91%E7%AB%99%E6%95%B4%E7%AB%99%E6%A8%A1%E6%9D%BF/images/g7.jpg
+//http://www.sucai8.cn/demo/2019/10/%E5%A4%A7%E6%B0%94%E6%97%85%E6%B8%B8%E7%BD%91%E7%AB%99%E6%95%B4%E7%AB%99%E6%A8%A1%E6%9D%BF/images/price.jpg
 import $ from 'jquery'
 export default {
   data(){

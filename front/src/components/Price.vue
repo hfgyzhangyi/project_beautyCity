@@ -51,8 +51,109 @@
             </div>
         </header>
         <div class="innerpage-banner">
-			<div class="layer1"></div>
-		</div>
+          <div class="layer1"></div>
+        </div>
+        <div class="container price">
+          <h1>价格</h1>
+          <div class="row content">
+            <div class="col-lg-3 col-sm-6 card">
+              <div class="pic-wrap">
+                <img src="../assets/price.jpg"/>
+                <div class="text-wrap">
+                  <p class="city">伦敦</p>
+                  <p>目的地</p>
+                </div>
+              </div>
+              <div class="content-wrap card-body">
+                <div class="card-title">
+                  <h5>
+                    <span class="align-top">RMB</span>
+                    1100
+                    <small class="text-muted">/ 4 days</small>
+                  </h5>
+                </div>
+                <ul class="list-unstyled">
+                  <li>Lorem Ipsum is simply</li>
+                  <li>Lorem Ipsum is simply</li>
+                  <li>Lorem Ipsum is simply</li>
+                </ul>
+                <a href="javascript:;" class="btn">CONTACT</a>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 card">
+              <div class="pic-wrap">
+                <img src="../assets/price.jpg"/>
+                <div class="text-wrap">
+                  <p class="city">土耳其</p>
+                  <p>目的地</p>
+                </div>
+              </div>
+              <div class="content-wrap card-body">
+                <div class="card-title">
+                  <h5>
+                    <span class="align-top">RMB</span>
+                    2300
+                    <small class="text-muted">/ 7 days</small>
+                  </h5>
+                </div>
+                <ul class="list-unstyled">
+                  <li>Lorem Ipsum is simply</li>
+                  <li>Lorem Ipsum is simply</li>
+                  <li>Lorem Ipsum is simply</li>
+                </ul>
+                <a href="javascript:;" class="btn">CONTACT</a>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 card">
+              <div class="pic-wrap">
+                <img src="../assets/price.jpg"/>
+                <div class="text-wrap">
+                  <p class="city">巴黎</p>
+                  <p>目的地</p>
+                </div>
+              </div>
+              <div class="content-wrap card-body">
+                <div class="card-title">
+                  <h5>
+                    <span class="align-top">RMB</span>
+                    6590
+                    <small class="text-muted">/ 8 days</small>
+                  </h5>
+                </div>
+                <ul class="list-unstyled">
+                  <li>Lorem Ipsum is simply</li>
+                  <li>Lorem Ipsum is simply</li>
+                  <li>Lorem Ipsum is simply</li>
+                </ul>
+                <a href="javascript:;" class="btn">CONTACT</a>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 card">
+              <div class="pic-wrap">
+                <img src="../assets/price.jpg"/>
+                <div class="text-wrap">
+                  <p class="city">意大利</p>
+                  <p>目的地</p>
+                </div>
+              </div>
+              <div class="content-wrap card-body">
+                <div class="card-title">
+                  <h5>
+                    <span class="align-top">RMB</span>
+                    8000
+                    <small class="text-muted">/ 12 days</small>
+                  </h5>
+                </div>
+                <ul class="list-unstyled">
+                  <li>Lorem Ipsum is simply</li>
+                  <li>Lorem Ipsum is simply</li>
+                  <li>Lorem Ipsum is simply</li>
+                </ul>
+                <a href="javascript:;" class="btn">CONTACT</a>
+              </div>
+            </div>
+          </div>
+        </div>
         <my-bottom></my-bottom>
     </div>
 </template>
@@ -276,4 +377,91 @@ li.nav-item{
     min-height: 300px;
 }
 /*****************************************/
+.price h1{
+  font-weight: bold;
+  text-align: center;
+  margin: 3rem 0;
+}
+.pic-wrap{
+  width: 100%;
+  position: relative;
+}
+.pic-wrap img{
+  width: 100%;
+}
+.text-wrap{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: 100%;
+}
+.text-wrap p{
+  color: #fff;
+  text-align: center;
+}
+.text-wrap p:nth-child(1){
+  margin-bottom: 0;
+  font-weight: bold;
+  font-size: 2em;
+}
+.text-wrap p:nth-child(2){
+  margin-bottom: 0;
+  font-size: 2em;
+  line-height: 1.5rem;
+}
+.content{
+  margin-bottom: 3rem;
+}
+.card{
+  border: none;
+}
+.card-body{
+  background: #e9e9e9;
+  padding: 2em;
+  text-align: center;
+}
+.align-top{
+  vertical-align: top;
+  font-size: 0.5em;
+  display: inline-block;
+  color: #000;
+}
+.card-title h5{
+  font-size: 1.5em;
+  color: #1c1c1d;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+.card-title small.text-muted{
+  font-size: 0.7em;
+  color: #6c757d !important;
+}
+ul.list-unstyled li{
+  font-size: 14px;
+  color: #7d7d7d;
+  letter-spacing: 1px;
+  line-height: 2.2em;
+  text-align: center;
+  border-bottom: 1px solid #dee2e6 !important;
+  padding: 0.5rem;
+}
+.card{
+  margin-bottom: 1.1em;
+}
+.btn{
+  padding: 0.5em 1.5em;
+  background: #f2994a;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 1.5em;
+}
+.btn:hover{
+  background-color: #333333;
+}
 </style>
