@@ -35,7 +35,7 @@
                                         <router-link :to="{name:'Price'}">定价计划</router-link>
                                     </li>
                                     <li>
-                                        <router-link :to="{name:'Home'}">路线选择</router-link>
+                                        <router-link :to="{name:'Route'}">路线选择</router-link>
                                     </li>
                                 </ul>
                             </li>
@@ -43,7 +43,7 @@
                                 <router-link class="nav-link" :to="{name:'Recommend'}">推介</router-link>
                             </li>
                             <li class="nav-item pr-lg-0">
-                                <router-link class="nav-link pr-lg-0" :to="{name:'Home'}">联系</router-link>
+                                <router-link class="nav-link pr-lg-0" :to="{name:'Connect'}">联系</router-link>
                             </li>
                         </ul>
                     </div>

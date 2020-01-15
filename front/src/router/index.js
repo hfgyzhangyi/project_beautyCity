@@ -29,6 +29,16 @@ export default new Router({
       path: '/Price',
       name: 'Price',
       component: resolve=>require(["@/components/Price"], resolve)
+    },
+    {
+      path: '/Route',
+      name: 'Route',
+      component: resolve=>require(["@/components/Route"], resolve)
+    },
+    {
+      path: '/Connect',
+      name: 'Connect',
+      component: resolve=>require(["@/components/Connect"], resolve)
     }
   ]
 })
